@@ -9,10 +9,8 @@ A simple cli tool for creating and adding to a project&#39;s yaml formatted chan
 [![License](https://img.shields.io/npm/l/yaml-changelog.svg)](https://github.com/goistjt/yaml-changelog/blob/master/package.json)
 
 <!-- toc -->
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`yaml-changelog hello [FILE]`](#yaml-changelog-hello-file)
-  - [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -30,6 +28,10 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`yaml-changelog hello [FILE]`](#yaml-changelog-hello-file)
+* [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
+* [`yaml-changelog init [FILE]`](#yaml-changelog-init-file)
+
 ## `yaml-changelog hello [FILE]`
 
 describe the command here
@@ -66,4 +68,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
+
+## `yaml-changelog init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ yaml-changelog init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/init.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/init.ts)_
 <!-- commandsstop -->
