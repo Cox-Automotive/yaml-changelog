@@ -1,25 +1,25 @@
-import {Command, flags} from '@oclif/command'
+import {Command, flags} from '@oclif/command';
+import * as fs from 'fs';
+
+const CHANGELOG_PATH = 'CHANGELOG.yaml';
 
 export default class Init extends Command {
-  static description = 'describe the command here'
+  static description = `Create an empty ${CHANGELOG_PATH}`;
 
   static flags = {
     help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
-
-  static args = [{name: 'file'}]
+  };
 
   async run() {
-    const {args, flags} = this.parse(Init)
-
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from /Users/jgoist/Workspaces/yaml-changelog/src/commands/init.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    if (fs.existsSync(CHANGELOG_PATH)) {
+      this.log(`${CHANGELOG_PATH} already exists - no changes made`);
+    } else {
+      this.log(`Creating ${CHANGELOG_PATH}`);
+      fs.open(`${CHANGELOG_PATH}`, 'w', (err) => {
+        if (err) {
+          this.log(`Error occurred while creating ${CHANGELOG_PATH}`, err);
+        }
+      });
     }
   }
 }
