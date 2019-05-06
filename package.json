@@ -1,0 +1,58 @@
+{
+  "name": "yaml-changelog",
+  "description": "A simple cli tool for creating and adding to a project's yaml formatted changelog",
+  "version": "0.0.0",
+  "author": "Jeremiah Goist",
+  "bin": {
+    "yaml-changelog": "./bin/run"
+  },
+  "bugs": "https://github.com/goistjt/yaml-changelog/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/tslint": "^3",
+    "@types/node": "^10",
+    "globby": "^8",
+    "ts-node": "^8",
+    "tslint": "^5",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/goistjt/yaml-changelog",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "yaml-changelog",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "goistjt/yaml-changelog",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix"
+  },
+  "types": "lib/index.d.ts"
+}

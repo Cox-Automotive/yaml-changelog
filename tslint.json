@@ -1,0 +1,18 @@
+{
+  "extends": "@oclif/tslint",
+  "rules": {
+    "arrow-parens": true,
+    "curly": true,
+    "eofline":true,
+    "semicolon": true,
+    "triple-equals": true,
+    "max-line-length": {
+      "options":[120]
+    }
+  },
+  "linterOptions": {
+    "exclude": [
+      "bin"
+    ]
+  }
+}
