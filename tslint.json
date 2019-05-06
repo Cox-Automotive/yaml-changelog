@@ -3,12 +3,16 @@
   "rules": {
     "arrow-parens": true,
     "curly": true,
+    "deprecation": true,
     "eofline":true,
+    "max-line-length": {"options":[120]},
+    "no-floating-promises":true,
+    "no-for-in-array": false,
+    "no-unnecessary-qualifier": true,
+    "prefer-readonly": true,
     "semicolon": true,
     "triple-equals": true,
-    "max-line-length": {
-      "options":[120]
-    }
+    "use-default-type-parameter": true
   },
   "linterOptions": {
     "exclude": [
