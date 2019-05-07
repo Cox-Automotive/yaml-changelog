@@ -1,7 +1,7 @@
 import {Command, flags} from '@oclif/command';
 import * as fs from 'fs';
 
-const CHANGELOG_PATH = 'CHANGELOG.yaml';
+import {CHANGELOG_PATH} from '../constants';
 
 export default class Init extends Command {
   static description = `Create an empty ${CHANGELOG_PATH}`;

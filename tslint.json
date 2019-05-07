@@ -1,7 +1,7 @@
 {
   "extends": "@oclif/tslint",
   "rules": {
-    "arrow-parens": true,
+    "arrow-parens": false,
     "curly": true,
     "deprecation": true,
     "eofline":true,

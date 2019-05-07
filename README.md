@@ -28,9 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`yaml-changelog add [FILE]`](#yaml-changelog-add-file)
 * [`yaml-changelog hello [FILE]`](#yaml-changelog-hello-file)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
-* [`yaml-changelog init [FILE]`](#yaml-changelog-init-file)
+* [`yaml-changelog init`](#yaml-changelog-init)
+
+## `yaml-changelog add [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ yaml-changelog add [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/add.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/add.ts)_
 
 ## `yaml-changelog hello [FILE]`
 
@@ -71,14 +88,14 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6
 
 ## `yaml-changelog init`
 
-Creates an empty CHANGELOG.yaml
+Create an empty CHANGELOG.yaml
 
 ```
 USAGE
   $ yaml-changelog init
 
 OPTIONS
-  -h, --help       show CLI help
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/init.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/init.ts)_
