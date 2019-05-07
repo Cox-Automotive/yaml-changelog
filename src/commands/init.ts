@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command';
 import * as fs from 'fs';
+import {safeDump} from 'js-yaml';
 
 import {CHANGELOG_PATH} from '../constants';
 
@@ -15,11 +16,11 @@ export default class Init extends Command {
       this.log(`${CHANGELOG_PATH} already exists - no changes made`);
     } else {
       this.log(`Creating ${CHANGELOG_PATH}`);
-      fs.open(`${CHANGELOG_PATH}`, 'w', (err) => {
-        if (err) {
-          this.log(`Error occurred while creating ${CHANGELOG_PATH}`, err);
-        }
-      });
+      fs.writeFileSync(`${CHANGELOG_PATH}`,
+        safeDump(
+          {changes: []},
+          {sortKeys: true, lineWidth: 120}
+        ));
     }
   }
 }

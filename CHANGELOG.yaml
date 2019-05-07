@@ -1,7 +1,7 @@
-
----
-timestamp: 20190507 13:58:51
-user: jgoist
-story: US233458
-description: |
-  Added method to append documents to CHANGELOG.yaml
+changes:
+  - timestamp: '20190507 15:05:45'
+    user: jgoist
+    story: US233458
+    description: |-
+      Implemented method to initialize CHANGELOG.yaml in expected format.
+      Added method to append an object to changes with the timestamp, user, story, and description of changes.

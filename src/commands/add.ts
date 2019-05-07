@@ -1,6 +1,7 @@
 import {Command, flags} from '@oclif/command';
 import * as fs from 'fs';
 import * as inquirer from 'inquirer';
+import {safeDump, safeLoad} from 'js-yaml';
 import * as moment from 'moment';
 
 import {CHANGELOG_PATH} from '../constants';
@@ -16,14 +17,12 @@ export default class Add extends Command {
   };
 
   buildChangelogMessage = (answers: inquirer.Answers) => {
-    let change = '\n---';
-    change += `\ntimestamp: ${moment().format('YYYYMMDD HH:mm:ss')}`;
-    change += `\nuser: ${answers.user}`;
-    if (answers.story) {
-      change += `\nstory: ${answers.story}`;
-    }
-    change += `\ndescription: |\n  ${answers.description.replace(/\n/g, '\n  ')}`;
-    return change;
+    return {
+      timestamp: moment().format('YYYYMMDD HH:mm:ss'),
+      user: answers.user,
+      ...answers.story && {story: answers.story},
+      description: answers.description
+    };
   }
 
   async run() {
@@ -89,6 +88,9 @@ export default class Add extends Command {
         return;
       }
     }
-    fs.appendFileSync(CHANGELOG_PATH, this.buildChangelogMessage(answers));
+
+    const changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
+    changelog.changes.push(this.buildChangelogMessage(answers));
+    fs.writeFileSync(CHANGELOG_PATH, safeDump(changelog, {lineWidth: 120}));
   }
 }
