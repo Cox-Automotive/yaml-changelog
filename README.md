@@ -6,7 +6,7 @@ A simple cli tool for creating and adding to a project&#39;s yaml formatted chan
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/yaml-changelog.svg)](https://npmjs.org/package/yaml-changelog)
 [![Downloads/week](https://img.shields.io/npm/dw/yaml-changelog.svg)](https://npmjs.org/package/yaml-changelog)
-[![License](https://img.shields.io/npm/l/yaml-changelog.svg)](https://github.com/goistjt/yaml-changelog/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/yaml-changelog.svg)](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -29,7 +29,6 @@ USAGE
 # Commands
 <!-- commands -->
 * [`yaml-changelog add [FILE]`](#yaml-changelog-add-file)
-* [`yaml-changelog hello [FILE]`](#yaml-changelog-hello-file)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
 * [`yaml-changelog init`](#yaml-changelog-init)
 
@@ -42,32 +41,10 @@ USAGE
   $ yaml-changelog add [FILE]
 
 OPTIONS
-  -f, --force
   -h, --help       show CLI help
-  -n, --name=name  name to print
 ```
 
-_See code: [src/commands/add.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/add.ts)_
-
-## `yaml-changelog hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ yaml-changelog hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ yaml-changelog hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/add.ts](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/v0.0.0/src/commands/add.ts)_
 
 ## `yaml-changelog help [COMMAND]`
 
@@ -98,5 +75,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/init.ts](https://github.com/goistjt/yaml-changelog/blob/v0.0.0/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/v0.0.0/src/commands/init.ts)_
 <!-- commandsstop -->
