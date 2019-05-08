@@ -1,14 +1,14 @@
-import {Command, flags} from '@oclif/command';
+import { Command, flags } from '@oclif/command';
 import * as fs from 'fs';
-import {safeDump} from 'js-yaml';
+import { safeDump } from 'js-yaml';
 
-import {CHANGELOG_PATH} from '../constants';
+import { CHANGELOG_PATH } from '../constants';
 
 export default class Init extends Command {
   static description = `Create an empty ${CHANGELOG_PATH}`;
 
   static flags = {
-    help: flags.help({char: 'h'}),
+    help: flags.help({ char: 'h' }),
   };
 
   async run() {
@@ -18,8 +18,8 @@ export default class Init extends Command {
       this.log(`Creating ${CHANGELOG_PATH}`);
       fs.writeFileSync(`${CHANGELOG_PATH}`,
         safeDump(
-          {changes: []},
-          {sortKeys: true, lineWidth: 120}
+          { changes: [] },
+          { sortKeys: true, lineWidth: 120 }
         ));
     }
   }

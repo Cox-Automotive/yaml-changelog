@@ -1,10 +1,11 @@
-import {Command, flags} from '@oclif/command';
+import { Command, flags } from '@oclif/command';
 import * as fs from 'fs';
 import * as inquirer from 'inquirer';
-import {safeDump, safeLoad} from 'js-yaml';
+import { safeDump, safeLoad } from 'js-yaml';
 import * as moment from 'moment';
 
-import {CHANGELOG_PATH} from '../constants';
+import { CHANGELOG_PATH } from '../constants';
+import { Change } from '../types';
 
 import Init from './init';
 
@@ -13,14 +14,14 @@ export default class Add extends Command {
     'and description of changes.';
 
   static flags = {
-    help: flags.help({char: 'h'})
+    help: flags.help({ char: 'h' })
   };
 
-  buildChangelogMessage = (answers: inquirer.Answers) => {
+  buildChangelogMessage = (answers: inquirer.Answers): Change => {
     return {
       timestamp: moment().format('YYYYMMDD HH:mm:ss'),
       user: answers.user,
-      ...answers.story && {story: answers.story},
+      ...answers.story && { story: answers.story },
       description: answers.description
     };
   }
@@ -91,6 +92,6 @@ export default class Add extends Command {
 
     const changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
     changelog.changes.push(this.buildChangelogMessage(answers));
-    fs.writeFileSync(CHANGELOG_PATH, safeDump(changelog, {lineWidth: 120}));
+    fs.writeFileSync(CHANGELOG_PATH, safeDump(changelog, { lineWidth: 120 }));
   }
 }

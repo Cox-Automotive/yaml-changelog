@@ -5,3 +5,9 @@ changes:
     description: |-
       Implemented method to initialize CHANGELOG.yaml in expected format.
       Added method to append an object to changes with the timestamp, user, story, and description of changes.
+  - timestamp: '20190508 10:50:37'
+    user: jgoist
+    story: US233458
+    description: |-
+      Added diff command to compare the current changelog against a branch, specific revision, or current revision.
+      diff also includes a flag -c which will make it only log the difference in length between changelogs.

@@ -9,6 +9,7 @@
     "no-floating-promises":true,
     "no-for-in-array": false,
     "no-unnecessary-qualifier": true,
+    "object-curly-spacing": true,
     "prefer-readonly": true,
     "semicolon": true,
     "triple-equals": true,
