@@ -19,7 +19,7 @@ export default class Add extends Command {
 
   buildChangelogMessage = (answers: inquirer.Answers): Change => {
     return {
-      timestamp: moment().format('YYYYMMDD HH:mm:ss'),
+      timestamp: moment().format('YYYY-MM-DD HH:mm:ss'),
       user: answers.user,
       ...answers.story && { story: answers.story },
       description: answers.description

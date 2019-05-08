@@ -28,23 +28,52 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`yaml-changelog add [FILE]`](#yaml-changelog-add-file)
+* [`yaml-changelog add`](#yaml-changelog-add)
+* [`yaml-changelog diff`](#yaml-changelog-diff)
+* [`yaml-changelog filter [FILE]`](#yaml-changelog-filter-file)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
 * [`yaml-changelog init`](#yaml-changelog-init)
 
-## `yaml-changelog add [FILE]`
+## `yaml-changelog add`
+
+Adds a document to CHANGELOG.yaml containing a username, story number (optional) and description of changes.
+
+```
+USAGE
+  $ yaml-changelog add
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+## `yaml-changelog diff`
+
+Compares the changelog against the previous revision, HEAD of a given branch, or given commit hash
+
+```
+USAGE
+  $ yaml-changelog diff
+
+OPTIONS
+  -b, --branch=branch      branch to compare against
+  -c, --count              only output the number of changes difference between revs
+  -h, --help               show CLI help
+  -r, --revision=revision  commit hash to compare against
+```
+
+## `yaml-changelog filter [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ yaml-changelog add [FILE]
+  $ yaml-changelog filter [FILE]
 
 OPTIONS
+  -f, --force
   -h, --help       show CLI help
+  -n, --name=name  name to print
 ```
-
-_See code: [src/commands/add.ts](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/v0.0.0/src/commands/add.ts)_
 
 ## `yaml-changelog help [COMMAND]`
 
@@ -74,6 +103,4 @@ USAGE
 OPTIONS
   -h, --help  show CLI help
 ```
-
-_See code: [src/commands/init.ts](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/v0.0.0/src/commands/init.ts)_
 <!-- commandsstop -->
