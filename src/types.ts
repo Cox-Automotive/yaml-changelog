@@ -6,5 +6,6 @@ export interface Change {
 }
 
 export interface Changelog {
+  service: string;
   changes: Change[];
 }

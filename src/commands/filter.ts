@@ -26,6 +26,7 @@ export default class Filter extends Command {
       const filterDate = moment(args.date, moment.ISO_8601);
       const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
       const filteredLog: Changelog = {
+        ...changelog,
         changes: changelog.changes.filter(change => moment(change.timestamp).isAfter(filterDate))
       };
       this.log(JSON.stringify(filteredLog, null, 2));

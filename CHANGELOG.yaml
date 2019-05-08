@@ -1,3 +1,4 @@
+service: yaml-changelog
 changes:
   - timestamp: '2019-05-07 15:05:45'
     user: jgoist
@@ -11,3 +12,9 @@ changes:
     description: |-
       Added diff command to compare the current changelog against a branch, specific revision, or current revision.
       diff also includes a flag -c which will make it only log the difference in length between changelogs.
+  - timestamp: '2019-05-08 13:51:02'
+    user: jgoist
+    story: US233458
+    description: |-
+      Implemented filter which returns all changes after a date given in YYYY-MM-DD format.
+      Updated Changelog format to include the service name at the top level.

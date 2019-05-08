@@ -11,14 +11,25 @@ export default class Init extends Command {
     help: flags.help({ char: 'h' }),
   };
 
+  static args = [
+    {
+      name: 'service',
+      description: 'Name of the service the changelog is being created in'
+    }
+  ];
+
   async run() {
+    const { args } = this.parse(Init);
     if (fs.existsSync(CHANGELOG_PATH)) {
       this.log(`${CHANGELOG_PATH} already exists - no changes made`);
     } else {
       this.log(`Creating ${CHANGELOG_PATH}`);
       fs.writeFileSync(`${CHANGELOG_PATH}`,
         safeDump(
-          { changes: [] },
+          {
+            service: args.service,
+            changes: []
+          },
           { sortKeys: true, lineWidth: 120 }
         ));
     }
