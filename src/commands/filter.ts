@@ -1,25 +1,38 @@
 import { Command, flags } from '@oclif/command';
+import * as fs from 'fs';
+import { safeLoad } from 'js-yaml';
+import moment = require('moment');
+
+import { CHANGELOG_PATH } from '../constants';
+import { Changelog } from '../types';
 
 export default class Filter extends Command {
-  static description = 'describe the command here';
+  static description = 'dislays all entries in the changelog after the provided date';
 
   static flags = {
     help: flags.help({ char: 'h' }),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({ char: 'n', description: 'name to print' }),
-    // flag with no value (-f, --force)
-    force: flags.boolean({ char: 'f' }),
   };
 
-  static args = [{ name: 'file' }];
+  static args = [{ name: 'date' }];
 
   async run() {
-    const { args, flags } = this.parse(Filter);
+    const { args } = this.parse(Filter);
+    if (!args.date) {
+      this.error('A date must be provided to filter from');
+      return -1;
+    }
 
-    const name = flags.name || 'world';
-    this.log(`hello ${name} from /Users/jgoist/Workspaces/yaml-changelog/src/commands/filter.ts`);
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`);
+    try {
+      const filterDate = moment(args.date, moment.ISO_8601);
+      const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
+      const filteredLog: Changelog = {
+        changes: changelog.changes.filter(change => moment(change.timestamp).isAfter(filterDate))
+      };
+      this.log(JSON.stringify(filteredLog, null, 2));
+    // tslint:disable-next-line: no-unused
+    } catch (err) {
+      this.error(`Unable to parse ${args.date}. Please provide a date with the format 'YYYY-MM-DD'`);
+      return -1;
     }
   }
 }
