@@ -13,7 +13,7 @@ export default class Filter extends Command {
     help: flags.help({ char: 'h' }),
   };
 
-  static args = [{ name: 'date' }];
+  static args = [{ name: 'date', description: "A date in 'YYYY-MM-DD' format" }];
 
   async run() {
     const { args } = this.parse(Filter);
