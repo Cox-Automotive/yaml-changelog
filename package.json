@@ -6,7 +6,7 @@
   "bin": {
     "yaml-changelog": "./bin/run"
   },
-  "bugs": "https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/issues",
+  "bugs": "https://github.com/Cox-Automotive/yaml-changelog/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -37,7 +37,11 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog",
+  "homepage": "https://github.com/Cox-Automotive/yaml-changelog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cox-Automotive/yaml-changelog.git"
+  },
   "keywords": [
     "oclif"
   ],

@@ -6,7 +6,7 @@ A simple cli tool for creating and adding to a project&#39;s yaml formatted chan
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/yaml-changelog.svg)](https://npmjs.org/package/yaml-changelog)
 [![Downloads/week](https://img.shields.io/npm/dw/yaml-changelog.svg)](https://npmjs.org/package/yaml-changelog)
-[![License](https://img.shields.io/npm/l/yaml-changelog.svg)](https://ghe.coxautoinc.com/Jeremiah-Goist/yaml-changelog/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/yaml-changelog.svg)](https://github.com/Cox-Automotive/yaml-changelog/blob/master/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
