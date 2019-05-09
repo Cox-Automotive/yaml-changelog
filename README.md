@@ -11,6 +11,7 @@ A simple cli tool for creating and adding to a project&#39;s yaml formatted chan
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* [Contributing](#contributing)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
