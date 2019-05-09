@@ -4,7 +4,6 @@ import * as Handlebars from 'handlebars';
 import { safeLoad } from 'js-yaml';
 import moment = require('moment');
 
-import { CHANGELOG_PATH } from '../constants';
 import { Change, Changelog } from '../types';
 
 export default class Render extends Command {
@@ -19,11 +18,11 @@ export default class Render extends Command {
   async run() {
     const { args } = this.parse(Render);
     if (!args.file) {
-      this.error('A file must be provided to render');
+      this.error('A json or yaml file must be provided to render');
       return -1;
     }
 
-    const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
+    const changelog: Changelog = safeLoad(fs.readFileSync(args.file, 'utf-8'));
     changelog.changes = changelog.changes.map((change: Change) => {
       return {
         ...change,

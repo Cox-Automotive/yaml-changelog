@@ -64,7 +64,7 @@ OPTIONS
 
 ## `yaml-changelog filter [DATE]`
 
-dislays all entries in the changelog after the provided date
+Dislays all entries in the changelog after the provided date
 
 ```
 USAGE
@@ -79,7 +79,7 @@ OPTIONS
 
 ## `yaml-changelog help [COMMAND]`
 
-display help for yaml-changelog
+Display help for yaml-changelog
 
 ```
 USAGE
