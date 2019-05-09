@@ -1,6 +1,6 @@
 # {{this.service}}
 {{#each this.changes}}
 
-### {{this.timestamp}} - {{this.story}}
+### {{this.timestamp}}{{#if this.story}} - {{this.story}}{{/if}}
 {{this.description}}
 {{/each}}
