@@ -16,11 +16,11 @@ A simple cli tool for creating and adding to a project&#39;s yaml formatted chan
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g yaml-changelog
+$ npm install -g @cox-automotive/yaml-changelog
 $ yaml-changelog COMMAND
 running command...
 $ yaml-changelog (-v|--version|version)
-yaml-changelog/0.0.0 darwin-x64 node-v10.15.3
+@cox-automotive/yaml-changelog/0.0.1 darwin-x64 node-v10.15.3
 $ yaml-changelog --help [COMMAND]
 USAGE
   $ yaml-changelog COMMAND
@@ -48,6 +48,8 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
+_See code: [src/commands/add.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.1/src/commands/add.ts)_
+
 ## `yaml-changelog diff`
 
 Compares the changelog against the previous revision, HEAD of a given branch, or given commit hash
@@ -63,6 +65,8 @@ OPTIONS
   -r, --revision=revision  commit hash to compare against
 ```
 
+_See code: [src/commands/diff.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.1/src/commands/diff.ts)_
+
 ## `yaml-changelog filter [DATE]`
 
 Dislays all entries in the changelog after the provided date
@@ -72,15 +76,17 @@ USAGE
   $ yaml-changelog filter [DATE]
 
 ARGUMENTS
-  DATE  A date in 'YYYY-MM-DD' format
+  DATE  A date in ISO 8601 format
 
 OPTIONS
   -h, --help  show CLI help
 ```
 
+_See code: [src/commands/filter.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.1/src/commands/filter.ts)_
+
 ## `yaml-changelog help [COMMAND]`
 
-Display help for yaml-changelog
+display help for yaml-changelog
 
 ```
 USAGE
@@ -110,6 +116,8 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
+_See code: [src/commands/init.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.1/src/commands/init.ts)_
+
 ## `yaml-changelog render [FILE]`
 
 Renders a given changelog to markdown
@@ -122,8 +130,10 @@ ARGUMENTS
   FILE  Changelog file to render
 
 OPTIONS
-  -h, --help       show CLI help
+  -h, --help  show CLI help
 ```
+
+_See code: [src/commands/render.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.1/src/commands/render.ts)_
 <!-- commandsstop -->
 # Contributing
 <!-- contribute -->
