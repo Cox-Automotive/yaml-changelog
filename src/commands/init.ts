@@ -20,6 +20,11 @@ export default class Init extends Command {
 
   async run() {
     const { args } = this.parse(Init);
+    if (!args.service) {
+      this.error('A service name must be provided');
+      return -1;
+    }
+
     if (fs.existsSync(CHANGELOG_PATH)) {
       this.log(`${CHANGELOG_PATH} already exists - no changes made`);
     } else {
@@ -30,7 +35,7 @@ export default class Init extends Command {
             service: args.service,
             changes: []
           },
-          { sortKeys: true, lineWidth: 120 }
+          { lineWidth: 120 }
         ));
     }
   }
