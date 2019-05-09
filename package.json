@@ -1,5 +1,5 @@
 {
-  "name": "yaml-changelog",
+  "name": "@cox-automotive/yaml-changelog",
   "description": "A simple cli tool for creating and adding to a project's yaml formatted changelog",
   "version": "0.0.1",
   "author": "Jeremiah Goist",
