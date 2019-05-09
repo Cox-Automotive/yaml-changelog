@@ -1,4 +1,5 @@
 # yaml-changelog
+
 ## 2019-05-07 - US233458
 ### Changes
 Implemented method to initialize CHANGELOG.yaml in expected format.\
@@ -17,5 +18,4 @@ Updated Changelog format to include the service name at the top level.
 ## 2019-05-09 - US233458
 ### Changes
 Added render command which parses a yaml-changelog formatted changelog to generate a CHANGELOG.md
-
 
