@@ -117,6 +117,9 @@ Renders a given changelog to markdown
 USAGE
   $ yaml-changelog render [FILE]
 
+ARGUMENTS
+  FILE  Changelog file to render
+
 OPTIONS
   -h, --help       show CLI help
 ```
