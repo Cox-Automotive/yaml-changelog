@@ -127,6 +127,8 @@ OPTIONS
 # Contributing
 <!-- contribute -->
 ## Prereqs
+- [Typescript](https://www.typescriptlang.org/)
+- [TSLint](https://palantir.github.io/tslint/)
 - [OCLIF](https://github.com/oclif/oclif) - Adding additional commands
 - [Yarn](https://yarnpkg.com/en/) - Dependency management
 <!-- contributestop -->
