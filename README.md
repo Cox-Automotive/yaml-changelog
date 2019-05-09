@@ -124,3 +124,9 @@ OPTIONS
   -h, --help       show CLI help
 ```
 <!-- commandsstop -->
+# Contributing
+<!-- contribute -->
+## Prereqs
+- [OCLIF](https://github.com/oclif/oclif) - Adding additional commands
+- [Yarn](https://yarnpkg.com/en/) - Dependency management
+<!-- contributestop -->
