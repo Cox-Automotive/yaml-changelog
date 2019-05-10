@@ -5,7 +5,7 @@ import { safeDump, safeLoad } from 'js-yaml';
 import * as moment from 'moment';
 
 import { CHANGELOG_PATH } from '../constants';
-import { Change } from '../types';
+import { Change, Changelog } from '../types';
 
 import Init from './init';
 
@@ -90,8 +90,11 @@ export default class Add extends Command {
       }
     }
 
-    const changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
-    changelog.changes.push(this.buildChangelogMessage(answers));
+    const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
+    changelog.changes.unshift(this.buildChangelogMessage(answers));
+    changelog.changes = changelog.changes.sort((a, b) => {
+      return moment(a.timestamp).isAfter(moment(b.timestamp)) ? -1 : 1;
+    });
     fs.writeFileSync(CHANGELOG_PATH, safeDump(changelog, { lineWidth: 120 }));
   }
 }
