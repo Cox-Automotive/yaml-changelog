@@ -1,4 +1,4 @@
-# {{this.service}}
+# {{this.project}}
 {{#each this.changes}}
 
 ### {{this.timestamp}}{{#if this.story}} - {{this.story}}{{/if}}

@@ -1,5 +1,14 @@
 # yaml-changelog
 
+### 2019-05-13 - US233458
+Implemented render-release command which accepts any number of releases.yaml files and renders them into a single markdown file\
+BREAKING CHANGES - changed &#x27;service&#x27; to &#x27;project&#x27; in changelog.yaml; changed &#x27;CHANGELOG.yaml&#x27; to &#x27;changelog.yaml&#x27;
+
+### 2019-05-13 - US233458
+Renamed CHANGELOG.yaml -&gt; changelog.yaml\
+Altered format of changelog.yaml - service -&gt; project\
+Added release command which takes a date and generates releases.yaml with a new block containing all changes since the last release
+
 ### 2019-05-10
 Added descending sort to &#x60;add&#x60; so that newest changes will be at the top of the changelog
 

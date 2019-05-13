@@ -1,5 +1,26 @@
 project: yaml-changelog
 releases:
+  - id: '2019-05-13 16:30:49'
+    changes:
+      - timestamp: '2019-05-13 16:28:30'
+        user: jgoist
+        story: US233458
+        description: >-
+          Implemented render-release command which accepts any number of releases.yaml files and renders them into a
+          single markdown file
+
+          BREAKING CHANGES - changed 'service' to 'project' in changelog.yaml; changed 'CHANGELOG.yaml' to
+          'changelog.yaml'
+      - timestamp: '2019-05-13 13:25:17'
+        user: jgoist
+        story: US233458
+        description: >-
+          Renamed CHANGELOG.yaml -> changelog.yaml
+
+          Altered format of changelog.yaml - service -> project
+
+          Added release command which takes a date and generates releases.yaml with a new block containing all changes
+          since the last release
   - id: '2019-05-11 00:00:00'
     changes:
       - timestamp: '2019-05-10 15:43:52'
