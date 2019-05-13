@@ -19,3 +19,10 @@ export interface ReleaseLog {
   project: string;
   releases: Release[];
 }
+
+export interface ReleaseMd {
+  [id: string]: {
+    name: string;
+    changes: string[];
+  }[];
+}

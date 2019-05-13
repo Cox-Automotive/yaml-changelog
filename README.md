@@ -34,8 +34,9 @@ USAGE
 * [`yaml-changelog filter [DATE]`](#yaml-changelog-filter-date)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
 * [`yaml-changelog init [SERVICE]`](#yaml-changelog-init-service)
-* [`yaml-changelog release [FILE]`](#yaml-changelog-release-file)
+* [`yaml-changelog release [DATE]`](#yaml-changelog-release-date)
 * [`yaml-changelog render [FILE]`](#yaml-changelog-render-file)
+* [`yaml-changelog render-release [FILE]...`](#yaml-changelog-render-release-file)
 
 ## `yaml-changelog add`
 
@@ -119,18 +120,19 @@ OPTIONS
 
 _See code: [src/commands/init.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/init.ts)_
 
-## `yaml-changelog release [FILE]`
+## `yaml-changelog release [DATE]`
 
-describe the command here
+Regenerates releases.yaml with changes from changelog.yaml
 
 ```
 USAGE
-  $ yaml-changelog release [FILE]
+  $ yaml-changelog release [DATE]
+
+ARGUMENTS
+  DATE  A date in ISO 8601 format
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/release.ts)_
@@ -151,6 +153,23 @@ OPTIONS
 ```
 
 _See code: [src/commands/render.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/render.ts)_
+
+## `yaml-changelog render-release [FILE]...`
+
+Given a list of releases.yaml files, generates a single RELEASE_NOTES.md
+
+```
+USAGE
+  $ yaml-changelog render-release [FILE]...
+
+ARGUMENTS
+  FILE  releases.yaml to render
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/render-release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/render-release.ts)_
 <!-- commandsstop -->
 # Contributing
 <!-- contribute -->
