@@ -22,17 +22,17 @@ export default class Filter extends Command {
       return -1;
     }
 
-    try {
-      const filterDate = moment(args.date, moment.ISO_8601);
-      const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
-      const filteredLog: Changelog = {
-        ...changelog,
-        changes: changelog.changes.filter(change => moment(change.timestamp).isAfter(filterDate))
-      };
-      this.log(JSON.stringify(filteredLog, null, 2));
-    } catch {
+    const filterDate = moment(args.date, moment.ISO_8601);
+    if (!filterDate.isValid()) {
       this.error(`Unable to parse ${args.date}. Please provide an ISO 8601 formatted date`);
       return -1;
     }
+
+    const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
+    const filteredLog: Changelog = {
+      ...changelog,
+      changes: changelog.changes.filter(change => moment(change.timestamp).isAfter(filterDate))
+    };
+    this.log(JSON.stringify(filteredLog, null, 2));
   }
 }

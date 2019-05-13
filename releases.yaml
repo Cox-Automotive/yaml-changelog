@@ -1,0 +1,29 @@
+project: yaml-changelog
+releases:
+  - id: '2019-05-11 00:00:00'
+    changes:
+      - timestamp: '2019-05-10 15:43:52'
+        user: jgoist
+        description: Added descending sort to `add` so that newest changes will be at the top of the changelog
+      - timestamp: '2019-05-09 08:47:15'
+        user: jgoist
+        story: US233458
+        description: Added render command which parses a yaml-changelog formatted changelog to generate a CHANGELOG.md
+      - timestamp: '2019-05-08 13:51:02'
+        user: jgoist
+        story: US233458
+        description: |-
+          Implemented filter which returns all changes after a date given in YYYY-MM-DD format.
+          Updated Changelog format to include the service name at the top level.
+      - timestamp: '2019-05-08 10:50:37'
+        user: jgoist
+        story: US233458
+        description: |-
+          Added diff command to compare the current changelog against a branch, specific revision, or current revision.
+          diff also includes a flag -c which will make it only log the difference in length between changelogs.
+      - timestamp: '2019-05-07 15:05:45'
+        user: jgoist
+        story: US233458
+        description: |-
+          Implemented method to initialize CHANGELOG.yaml in expected format.
+          Added method to append an object to changes with the timestamp, user, story, and description of changes.

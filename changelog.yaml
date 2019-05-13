@@ -1,5 +1,15 @@
 project: yaml-changelog
 changes:
+  - timestamp: '2019-05-13 13:25:17'
+    user: jgoist
+    story: US233458
+    description: >-
+      Renamed CHANGELOG.yaml -> changelog.yaml
+
+      Altered format of changelog.yaml - service -> project
+
+      Added release command which takes a date and generates releases.yaml with a new block containing all changes since
+      the last release
   - timestamp: '2019-05-10 15:43:52'
     user: jgoist
     description: Added descending sort to `add` so that newest changes will be at the top of the changelog
