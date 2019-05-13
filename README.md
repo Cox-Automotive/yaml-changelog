@@ -34,11 +34,12 @@ USAGE
 * [`yaml-changelog filter [DATE]`](#yaml-changelog-filter-date)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
 * [`yaml-changelog init [SERVICE]`](#yaml-changelog-init-service)
+* [`yaml-changelog release [FILE]`](#yaml-changelog-release-file)
 * [`yaml-changelog render [FILE]`](#yaml-changelog-render-file)
 
 ## `yaml-changelog add`
 
-Adds a document to CHANGELOG.yaml containing a username, story number (optional) and description of changes.
+Adds a document to changelog.yaml containing a username, story number (optional) and description of changes.
 
 ```
 USAGE
@@ -103,7 +104,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6
 
 ## `yaml-changelog init [SERVICE]`
 
-Create an empty CHANGELOG.yaml
+Create an empty changelog.yaml
 
 ```
 USAGE
@@ -117,6 +118,22 @@ OPTIONS
 ```
 
 _See code: [src/commands/init.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/init.ts)_
+
+## `yaml-changelog release [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ yaml-changelog release [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.0.7/src/commands/release.ts)_
 
 ## `yaml-changelog render [FILE]`
 

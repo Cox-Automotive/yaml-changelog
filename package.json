@@ -53,10 +53,7 @@
     "bin": "yaml-changelog",
     "plugins": [
       "@oclif/plugin-help"
-    ],
-    "hooks": {
-      "init": "./lib/hooks/init/rename-changelog"
-    }
+    ]
   },
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
