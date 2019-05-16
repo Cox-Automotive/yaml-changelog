@@ -7,8 +7,6 @@ import * as moment from 'moment';
 import { CHANGELOG_PATH } from '../constants';
 import { Change, Changelog } from '../types';
 
-import Init from './init';
-
 export default class Add extends Command {
   static description = `Adds a document to ${CHANGELOG_PATH} containing a username, story number (optional) ` +
     'and description of changes.';
