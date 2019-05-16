@@ -1,3 +1,7 @@
+# 2019-05-16 09:19:12
+**[yaml-changelog]**
+- Removed changelog initialization from &#x60;add&#x60; command as it doesn&#x27;t work properly. Best to use &#x60;init&#x60; directly.
+
 # 2019-05-13 16:30:49
 **[yaml-changelog]**
 - Implemented render-release command which accepts any number of releases.yaml files and renders them into a single markdown file

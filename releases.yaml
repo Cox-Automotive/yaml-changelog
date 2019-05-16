@@ -1,5 +1,10 @@
 project: yaml-changelog
 releases:
+  - id: '2019-05-16 09:19:12'
+    changes:
+      - timestamp: '2019-05-16 09:16:50'
+        user: jgoist
+        description: Removed changelog initialization from `add` command as it doesn't work properly. Best to use `init` directly.
   - id: '2019-05-13 16:30:49'
     changes:
       - timestamp: '2019-05-13 16:28:30'
