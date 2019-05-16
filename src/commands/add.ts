@@ -70,26 +70,11 @@ export default class Add extends Command {
       }
     ];
 
-    const createPrompt: inquirer.Question[] = [
-      {
-        name: 'create',
-        type: 'confirm',
-        message: `${CHANGELOG_PATH} Does not exist - create it now?`,
-        default: false
-      }
-    ];
-
-    const answers = await inquirer.prompt(questions);
     if (!fs.existsSync(CHANGELOG_PATH)) {
-      const createAnswer = await inquirer.prompt(createPrompt);
-      if (createAnswer.create) {
-        await Init.run();
-      } else {
-        this.log(`${CHANGELOG_PATH} was not created. Unable to add to ${CHANGELOG_PATH}`);
-        return;
-      }
+      this.error(`${CHANGELOG_PATH} does not exist, please run 'yaml-changelog init <project_name>'`, { exit: -1 });
     }
 
+    const answers = await inquirer.prompt(questions);
     const changelog: Changelog = safeLoad(fs.readFileSync(CHANGELOG_PATH, 'utf-8'));
     changelog.changes.unshift(this.buildChangelogMessage(answers));
     changelog.changes = changelog.changes.sort((a, b) => {
