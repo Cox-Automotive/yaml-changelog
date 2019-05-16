@@ -33,7 +33,7 @@ USAGE
 * [`yaml-changelog diff`](#yaml-changelog-diff)
 * [`yaml-changelog filter [DATE]`](#yaml-changelog-filter-date)
 * [`yaml-changelog help [COMMAND]`](#yaml-changelog-help-command)
-* [`yaml-changelog init [SERVICE]`](#yaml-changelog-init-service)
+* [`yaml-changelog init [PROJECT]`](#yaml-changelog-init-project)
 * [`yaml-changelog release [DATE]`](#yaml-changelog-release-date)
 * [`yaml-changelog render [FILE]`](#yaml-changelog-render-file)
 * [`yaml-changelog render-release [FILE]...`](#yaml-changelog-render-release-file)
@@ -103,16 +103,16 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `yaml-changelog init [SERVICE]`
+## `yaml-changelog init [PROJECT]`
 
 Create an empty changelog.yaml
 
 ```
 USAGE
-  $ yaml-changelog init [SERVICE]
+  $ yaml-changelog init [PROJECT]
 
 ARGUMENTS
-  SERVICE  Name of the service the changelog is being created in
+  PROJECT  Name of the project the changelog is being created in
 
 OPTIONS
   -h, --help  show CLI help
