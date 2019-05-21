@@ -30,7 +30,7 @@ export default class Render extends Command {
         description: change.description.replace(/\n/g, '\\\n')
       };
     });
-    const template = Handlebars.compile(fs.readFileSync(`${__dirname}/../templates/changelog.tpl.md`).toString());
+    const template = Handlebars.compile(fs.readFileSync(`${__dirname}/../../templates/changelog.tpl.md`).toString());
     const md = template(changelog);
     this.log(md);
   }

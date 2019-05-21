@@ -1,3 +1,7 @@
+# 2019-05-21 13:19:11
+**[yaml-changelog]**
+- Moved templates folder to be at the root of the project
+
 # 2019-05-21 11:05:03
 **[yaml-changelog]**
 - Template files are read based on the currect executing path, not just src/templates

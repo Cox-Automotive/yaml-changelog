@@ -1,5 +1,17 @@
 # yaml-changelog
 
+### 2019-05-21
+Moved templates folder to be at the root of the project
+
+### 2019-05-21
+Template files are read based on the currect executing path, not just src/templates
+
+### 2019-05-21
+Added more validation to the story input so that the entire input must constist of story numbers, not just the beginning of the string
+
+### 2019-05-16
+Removed changelog initialization from &#x60;add&#x60; command as it doesn&#x27;t work properly. Best to use &#x60;init&#x60; directly.
+
 ### 2019-05-13 - US233458
 Implemented render-release command which accepts any number of releases.yaml files and renders them into a single markdown file\
 BREAKING CHANGES - changed &#x27;service&#x27; to &#x27;project&#x27; in changelog.yaml; changed &#x27;CHANGELOG.yaml&#x27; to &#x27;changelog.yaml&#x27;

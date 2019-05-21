@@ -1,5 +1,8 @@
 project: yaml-changelog
 changes:
+  - timestamp: '2019-05-21 13:19:00'
+    user: jgoist
+    description: Moved templates folder to be at the root of the project
   - timestamp: '2019-05-21 11:03:18'
     user: jgoist
     description: 'Template files are read based on the currect executing path, not just src/templates'
