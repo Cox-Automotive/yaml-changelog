@@ -20,7 +20,7 @@ $ npm install -g @cox-automotive/yaml-changelog
 $ yaml-changelog COMMAND
 running command...
 $ yaml-changelog (-v|--version|version)
-@cox-automotive/yaml-changelog/0.1.4 darwin-x64 node-v10.15.3
+@cox-automotive/yaml-changelog/0.1.5 darwin-x64 node-v10.15.3
 $ yaml-changelog --help [COMMAND]
 USAGE
   $ yaml-changelog COMMAND
@@ -50,7 +50,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/add.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/add.ts)_
 
 ## `yaml-changelog diff`
 
@@ -67,7 +67,7 @@ OPTIONS
   -r, --revision=revision  commit hash to compare against
 ```
 
-_See code: [src/commands/diff.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/diff.ts)_
+_See code: [src/commands/diff.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/diff.ts)_
 
 ## `yaml-changelog filter [DATE]`
 
@@ -84,7 +84,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/filter.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/filter.ts)_
+_See code: [src/commands/filter.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/filter.ts)_
 
 ## `yaml-changelog help [COMMAND]`
 
@@ -118,7 +118,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/init.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/init.ts)_
 
 ## `yaml-changelog release [DATE]`
 
@@ -135,7 +135,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/release.ts)_
+_See code: [src/commands/release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/release.ts)_
 
 ## `yaml-changelog render [FILE]`
 
@@ -152,7 +152,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/render.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/render.ts)_
+_See code: [src/commands/render.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/render.ts)_
 
 ## `yaml-changelog render-release [FILE]...`
 
@@ -169,7 +169,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/render-release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.4/src/commands/render-release.ts)_
+_See code: [src/commands/render-release.ts](https://github.com/Cox-Automotive/yaml-changelog/blob/v0.1.5/src/commands/render-release.ts)_
 <!-- commandsstop -->
 # Contributing
 <!-- contribute -->
