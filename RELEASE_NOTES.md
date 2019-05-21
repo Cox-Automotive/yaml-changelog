@@ -1,3 +1,7 @@
+# 2019-05-21 09:07:06
+**[yaml-changelog]**
+- Added more validation to the story input so that the entire input must constist of story numbers, not just the beginning of the string
+
 # 2019-05-16 09:19:12
 **[yaml-changelog]**
 - Removed changelog initialization from &#x60;add&#x60; command as it doesn&#x27;t work properly. Best to use &#x60;init&#x60; directly.
