@@ -31,8 +31,8 @@ export default class Init extends Command {
     } else {
       this.log(`Creating ${CHANGELOG_PATH}`);
       const initialChangelog: Changelog = {
+        project: args.project,
         changes: [],
-        project: args.project
       };
       fs.writeFileSync(`${CHANGELOG_PATH}`,
         safeDump(

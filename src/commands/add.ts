@@ -48,7 +48,7 @@ export default class Add extends Command {
           if (!value.length) {
             return true;
           }
-          if (!value.match(/^(US|DE)[\d]+/g)) {
+          if (!value.match(/^((US|DE)\d+ ?)+/g)) {
             return 'Stories must begin with \'US\' or \'DE\' and be followed by numbers';
           }
           return true;
