@@ -42,7 +42,7 @@ export default class RenderRelease extends Command {
       return p;
     }, {});
 
-    const template = Handlebars.compile(readFileSync('src/templates/release_notes.tpl.md').toString());
+    const template = Handlebars.compile(readFileSync(`${__dirname}/../templates/release_notes.tpl.md`).toString());
     const md = template(groupById);
     this.log(md);
   }
