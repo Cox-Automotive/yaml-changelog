@@ -1,5 +1,10 @@
 project: yaml-changelog
 releases:
+  - id: '2019-05-21 11:05:03'
+    changes:
+      - timestamp: '2019-05-21 11:03:18'
+        user: jgoist
+        description: 'Template files are read based on the currect executing path, not just src/templates'
   - id: '2019-05-21 09:07:06'
     changes:
       - timestamp: '2019-05-21 09:06:45'

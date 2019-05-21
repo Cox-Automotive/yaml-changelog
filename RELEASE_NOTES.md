@@ -1,3 +1,7 @@
+# 2019-05-21 11:05:03
+**[yaml-changelog]**
+- Template files are read based on the currect executing path, not just src/templates
+
 # 2019-05-21 09:07:06
 **[yaml-changelog]**
 - Added more validation to the story input so that the entire input must constist of story numbers, not just the beginning of the string
