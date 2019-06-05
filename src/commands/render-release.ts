@@ -2,6 +2,7 @@ import { Command, flags } from '@oclif/command';
 import { readFileSync } from 'fs';
 import * as Handlebars from 'handlebars';
 import { safeLoad } from 'js-yaml';
+import moment = require('moment');
 
 import { RELEASE_NOTES, RELEASES_PATH } from '../constants';
 import { Release, ReleaseLog, ReleaseMd } from '../types';
@@ -41,6 +42,11 @@ export default class RenderRelease extends Command {
       });
       return p;
     }, {});
+
+    const ordered: ReleaseMd = {};
+    Object.keys(groupById)
+      .sort((a: string, b: string) => moment(a, moment.ISO_8601).isAfter(moment(b, moment.ISO_8601)) ? -1 : 1)
+      .forEach((k: string) => ordered[k] = groupById[k]);
 
     const template = Handlebars.compile(readFileSync(`${__dirname}/../../templates/release_notes.tpl.md`).toString());
     const md = template(groupById);

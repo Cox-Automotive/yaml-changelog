@@ -1,5 +1,8 @@
 project: yaml-changelog
 changes:
+  - timestamp: '2019-06-05 10:11:17'
+    user: jgoist
+    description: Updated render-release to sort releases in reverse chrono order
   - timestamp: '2019-05-21 13:19:00'
     user: jgoist
     description: Moved templates folder to be at the root of the project

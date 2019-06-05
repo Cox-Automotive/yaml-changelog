@@ -1,5 +1,10 @@
 project: yaml-changelog
 releases:
+  - id: '2019-06-05 10:12:18'
+    changes:
+      - timestamp: '2019-06-05 10:11:17'
+        user: jgoist
+        description: Updated render-release to sort releases in reverse chrono order
   - id: '2019-05-21 13:19:11'
     changes:
       - timestamp: '2019-05-21 13:19:00'
