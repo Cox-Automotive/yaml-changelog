@@ -49,7 +49,7 @@ export default class RenderRelease extends Command {
       .forEach((k: string) => ordered[k] = groupById[k]);
 
     const template = Handlebars.compile(readFileSync(`${__dirname}/../../templates/release_notes.tpl.md`).toString());
-    const md = template(groupById);
+    const md = template(ordered);
     this.log(md);
   }
 }
